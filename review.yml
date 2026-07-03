@@ -1,0 +1,97 @@
+aid: carecom
+name: Care.com
+review:
+  question: Does Care.com expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  apiStatus: none
+  apiStatusNote: |
+    Care.com does not publish any documented public developer API - REST,
+    WebSocket, or otherwise. There is no developer portal, no public API
+    reference, and no self-service API-key issuance for the care.com
+    marketplace. Consequently there is no WebSocket surface to document.
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Care.com exposes no publicly documented
+    event, streaming, or WebSocket transport - in fact it exposes no publicly
+    documented API surface at all - so there is nothing to model.
+findings:
+  summary: |
+    Care.com does not publish a documented public API, and therefore does not
+    publish a documented public WebSocket API. Care.com is a consumer and
+    enterprise two-sided marketplace connecting families with caregivers
+    (childcare, senior care, pet care, housekeeping, tutoring, special-needs
+    care). It was founded in 2007, went public on the NYSE (CRCM) in 2014, and
+    was acquired by IAC (IAC Inc.) in February 2020 for roughly $500 million,
+    at which point it went private. Extensive searching found no developer
+    portal (no developer.care.com), no public REST or WebSocket API reference,
+    no published OpenAPI/AsyncAPI, and no self-service API credentials. The
+    Care.com GitHub organization (github.com/caredotcom) hosts only internal
+    DevOps and infrastructure tooling (PagerDuty scheduling, Ansible inventory
+    scripts, forked Grails plugins), not customer-facing API libraries. The
+    only partner-facing programmatic capability located is a private job-import
+    integration within Care.com Recruiting Solutions / Care for Business, which
+    lets an employer or ATS push/sync job postings; it is arranged through a
+    partnership agreement and is not openly documented. No ws:// or wss://
+    endpoint is documented anywhere.
+  apiAccessModel: |
+    Private / partnership-only. There is no open, self-service developer
+    program. Marketplace access for families and caregivers is via paid Basic
+    and Premium memberships (subscription), not via an API. Any programmatic
+    integration (e.g. recruiting/job-import for Care for Business) is
+    negotiated directly with Care.com and is not publicly documented.
+  disambiguation: |
+    Care.com (care.com, IAC-owned childcare/senior/pet/housekeeping
+    marketplace) is routinely confused with Caring.com (caring.com, a separate
+    senior-care review/directory company that DOES publish a documented JSON
+    API at docs.caring.com using a "Caring-Partner" header with a sandbox at
+    sandbox-dir.caring.com). This review concerns care.com only; the caring.com
+    API is a different provider and is out of scope here.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API reference exists for care.com. Any partner job-import integration is private and undocumented.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere for Care.com as of the review date.
+    - protocol: AsyncAPI/Event
+      scheme: n/a
+      documented: false
+      note: No public event, webhook, or streaming API is documented.
+  endpointsConfirmedRest: []
+  endpointsModeled: []
+  endpointsHistorical: []
+sources:
+  - url: https://www.care.com/
+    type: Website
+    note: Consumer marketplace homepage. No developer or API links.
+  - url: https://www.care.com/about/
+    type: CorporateWebsite
+    note: Corporate/about pages. No developer program or API mentioned.
+  - url: https://www.care.com/hiw/
+    type: Plans
+    note: Describes paid Basic and Premium memberships (subscription); no API, no API pricing.
+  - url: https://github.com/caredotcom
+    type: SourceCode
+    note: Care.com GitHub org - 11 repos of internal DevOps/infra tooling only; no customer-facing API docs or SDK.
+  - url: https://help.care.com
+    type: HelpCenter
+    note: Family/caregiver/partner help center. Recruiting Solutions references a private job-import integration, not a documented public API.
+  - url: https://en.wikipedia.org/wiki/Care.com
+    type: Reference
+    note: Company history, 2014 IPO (CRCM), February 2020 IAC acquisition (~$500M).
+  - url: https://docs.caring.com/
+    type: Reference
+    note: Belongs to Caring.com (a DIFFERENT company). Documented here only to disambiguate; not Care.com's API.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    Care.com exposes no documented public API of any kind, so no WebSocket
+    surface and no AsyncAPI document exist to author. The apis.yml was written
+    as an honest company entry with no `apis` array (no fabricated live API
+    surface), capturing IAC ownership, the membership access model, the
+    private partner job-import integration, and the Caring.com disambiguation.
