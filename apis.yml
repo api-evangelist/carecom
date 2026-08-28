@@ -22,6 +22,17 @@ description: >-
   JSON API at docs.caring.com); this entry is about care.com only. Access to
   the marketplace itself is via paid Basic and Premium memberships; there is no
   published API pricing.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
