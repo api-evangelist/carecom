@@ -1,5 +1,8 @@
 aid: carecom
 url: https://raw.githubusercontent.com/api-evangelist/carecom/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "Care.com is consumer- and enterprise-facing and does NOT publish a documented public developer API - there is no developer portal, no public API reference, and no self-service API keys."
 name: Care.com
 kind: company
 description: >-
