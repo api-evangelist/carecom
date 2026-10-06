@@ -71,9 +71,13 @@ tags_raw:
 - IAC
 - No Public API
 created: '2026-07-03'
-modified: '2026-07-03'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 common:
+- url: https://www.care.com/about/newsroom/
+  type: Blog
+- url: https://www.care.com/about/feed/
+  type: BlogRSS
 - type: DomainSecurity
   url: security/carecom-domain-security.yml
 - type: Website
