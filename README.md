@@ -1,4 +1,4 @@
-# Care.com (carecom)
+# Care.com
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,63 +64,81 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Care.com is a two-sided online marketplace that connects families with caregivers across childcare, senior care, pet care, housekeeping, tutoring, and special-needs care. It also runs "Care for Business," an enterprise care-benefit program used by employers such as Google, Starbucks, and Best Buy. Founded in 2007 by Sheila Lirio Marcelo, Care.com went public on the NYSE (ticker CRCM) in 2014 and was acquired by **IAC (IAC Inc.)** in **February 2020 for approximately $500 million**, taking it private.
+Care.com is a two-sided online marketplace that connects families with caregivers across childcare, senior care, pet care, housekeeping, tutoring, and special-needs care, plus a "Care for Business" employer benefit used by companies such as Google, Starbucks, and Best Buy. Founded in 2007 by Sheila Lirio Marcelo, the company went public on the NYSE (CRCM) in 2014 and was acquired by IAC (IAC Inc.) in February 2020 for approximately $500 million, taking it private. Care.com is consumer- and enterprise-facing and does NOT publish a documented public developer API - there is no developer portal, no public API reference, and no self-service API keys. Its GitHub organization (github.com/caredotcom) contains only internal DevOps/infra tooling, not customer-facing API libraries. The only partner-facing programmatic surface is a private job-import integration inside Care.com Recruiting Solutions / Care for Business, used to sync job postings from an employer ATS; it is provisioned through a partnership agreement rather than openly documented. Note - Care.com is frequently confused with Caring.com (a separate senior-care directory owned by Caring, Inc. that DOES publish a JSON API at docs.caring.com); this entry is about care.com only. Access to the marketplace itself is via paid Basic and Premium memberships; there is no published API pricing.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/carecom/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/carecom/refs/heads/main/apis.yml)
+**Areas:** Care · Childcare · Senior Care · Pet Care · Housekeeping · Marketplace · Caregivers · Two-Sided Marketplace · IaC
 
-## API Status: No Public Developer API
+## Care.com on APIs.io
 
-Care.com **does not publish a documented public developer API.** As of this review (2026-07-03):
+Everything profiled for Care.com is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/carecom/](https://apis.io/providers/carecom/)** — or go straight to one of the APIs or properties below.
 
-- There is **no developer portal** (no `developer.care.com`), **no public API reference**, and **no self-service API keys**.
-- No public **OpenAPI** or **AsyncAPI** description is published, and no **REST** or **WebSocket** endpoints are documented.
-- The Care.com GitHub organization ([github.com/caredotcom](https://github.com/caredotcom)) contains only internal DevOps/infrastructure tooling (PagerDuty scheduling, Ansible inventory scripts, forked Grails plugins) - **not** customer-facing API libraries or SDKs.
-- The only partner-facing programmatic surface located is a **private job-import integration** inside **Care.com Recruiting Solutions / Care for Business**, used to sync job postings from an employer or ATS. It is provisioned through a partnership agreement and is **not openly documented**.
+### Published properties
 
-Because no live, documented public API surface exists, this entry is an **honest company stub**: `apis.yml` contains **no `apis` array** and **no fabricated endpoints**, and there are no `openapi/`, `plans/`, `rate-limits/`, `finops/`, or `collections/` directories with modeled API data.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Do Not Confuse With Caring.com
+#### Security (1)
 
-Care.com is frequently confused with **Caring.com** - a **separate company** (a senior-care review/directory service) that **does** publish a documented JSON API at [docs.caring.com](https://docs.caring.com/) (authenticated with a `Caring-Partner` header, with a sandbox at `sandbox-dir.caring.com`). That API belongs to Caring.com, **not** Care.com, and is out of scope for this entry.
+Authentication, trust centre, and vulnerability disclosure.
 
-## Access & Pricing
+- [Carecom Domain Security](https://apis.io/security/carecom/carecom-domain-security/)
 
-Access to the Care.com marketplace is through **paid memberships**, not an API:
+## Where to find this API
 
-- **Basic Membership** - covers screening of individual caregivers, including background checks and identity verification.
-- **Premium Membership** - adds benefits such as higher search-result rankings, priority job alerts, and waived background-check fees.
-
-Membership is a consumer/enterprise subscription; **there is no published API pricing** because there is no public API product. Care for Business is sold to employers as a benefit program.
-
-## Tags
-
-- Care
-- Childcare
-- Senior Care
-- Pet Care
-- Housekeeping
-- Marketplace
-- Caregivers
-- Two-Sided Marketplace
-- IAC
-- No Public API
-
-## Timestamps
-
-- **Created:** 2026-07-03
-- **Modified:** 2026-07-03
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.care.com)
-- [Corporate Website](https://www.care.com/about/)
-- [LinkedIn](https://www.linkedin.com/company/care-com)
-- [GitHub Organization](https://github.com/caredotcom)
-- [Help Center](https://help.care.com)
-- [Plans / Membership](https://www.care.com/hiw/)
-- [Parent Company (IAC)](https://www.iac.com)
+- [Blog](https://www.care.com/about/newsroom/)
+- [GitHub](https://github.com/caredotcom)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 5.2** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/carecom/](https://apis.io/providers/carecom/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Care.com: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/carecom/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
